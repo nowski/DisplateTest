@@ -35,7 +35,7 @@ public class PosterPage extends BasePage {
 
 
     public boolean chooseSizeOfPoster(String size) {
-        driver.findElement(By.xpath("//*[contains(@class, 'image-background-size--"+size+"')]")).click();
+        driver.findElement(By.xpath("//*[contains(@class, 'image-background-size--" + size + "')]")).click();
         return selectSizePosterLarge.isDisplayed();
     }
 

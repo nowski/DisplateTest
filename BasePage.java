@@ -19,7 +19,7 @@ public class BasePage {
     public static Map<String, String> globalVariables = new HashMap<>();
     ClickHelper clickHelper;
 
-    public BasePage(){
+    public BasePage() {
         clickHelper = new ClickHelper();
         PageFactory.initElements(getDriver(), this);
     }
@@ -35,20 +35,21 @@ public class BasePage {
         options.addArguments("--start-maximized");
 
 
-
     }
 
-    public static void addToVariable(String name, String value){
+    public static void addToVariable(String name, String value) {
         globalVariables.put(name, value);
     }
-    public static String getVariable(String name){
+
+    public static String getVariable(String name) {
         return globalVariables.get(name);
     }
-    public static WebDriver getDriver(){
+
+    public static WebDriver getDriver() {
         return driver;
     }
 
-    public static void disposeDriver(){
+    public static void disposeDriver() {
         driver.close();
         driver.quit();
         driver = null;

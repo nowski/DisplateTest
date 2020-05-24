@@ -17,9 +17,6 @@ public class CartPage extends BasePage {
     }
 
 
-
-
-
     @FindBy(xpath = "//*[@class='text text--bold text--extra-big']")
     protected WebElement priceOnTheCartPage;
     @FindBy(xpath = "//*[@id='select-country']/div[@class='input-select__item input-select__item--selected']")
